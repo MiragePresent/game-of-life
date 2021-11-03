@@ -1,0 +1,12 @@
+{
+    "name": "miragepresent/ggame_of_life",
+    "description": "Game of life",
+    "authors": [
+        {
+            "name": "Davyd Holovii",
+            "email": "mirage.present@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
