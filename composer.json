@@ -8,5 +8,10 @@
         }
     ],
     "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "MiragePresent\\GoL\\": "src/"
+        }
+    },
     "require": {}
 }
