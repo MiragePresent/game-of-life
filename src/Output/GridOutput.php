@@ -12,9 +12,13 @@ class GridOutput
 {
     public static function print(array $grid): void
     {
-        foreach ($grid as $row) {
+        echo sprintf("    %s\n", implode('  ', range(0, count($grid[0]) - 1)));
+
+        foreach ($grid as $rowNum => $row) {
+            echo sprintf(' %d ', $rowNum);
+
             foreach ($row as $cell) {
-                echo 1 === $cell ? "▓▓" : "░░";
+                echo 1 === $cell ? "▓▓ " : "░░ ";
             }
 
             echo PHP_EOL;
