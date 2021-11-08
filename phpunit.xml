@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="phpunit.xsd"
+         bootstrap="bootstrap.php"
+         convertDeprecationsToExceptions="true"
+         colors="true"
+         verbose="true"
+         failOnRisky="true"
+         failOnWarning="true">
+    <testsuites>
+        <testsuite name="unit">
+            <directory>tests/</directory>
+        </testsuite>
+    </testsuites>
+
+    <coverage ignoreDeprecatedCodeUnits="true">
+        <include>
+            <directory suffix=".php">src</directory>
+        </include>
+    </coverage>
+
+    <php>
+        <ini name="precision" value="14"/>
+        <ini name="serialize_precision" value="14"/>
+
+        <const name="PHPUNIT_TESTSUITE" value="true"/>
+    </php>
+</phpunit>
