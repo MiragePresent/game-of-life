@@ -12,7 +12,8 @@ class GridOutput
 {
     public static function print(array $grid): void
     {
-        echo sprintf("    %s\n", implode('  ', range(0, count($grid[0]) - 1)));
+        $xCoordinates = current($grid);
+        echo sprintf("    %s\n", implode('  ', array_keys($xCoordinates)));
 
         foreach ($grid as $rowNum => $row) {
             echo sprintf(' %d ', $rowNum);

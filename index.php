@@ -2,6 +2,7 @@
 
 require __DIR__ . '/bootstrap.php';
 
+use MiragePresent\GoL\Output\GridOutput;
 use MiragePresent\GoL\Output\Printer;
 use MiragePresent\GoL\Game;
 
@@ -15,5 +16,15 @@ $input = [
 
 Printer::print("Hello from Game of Life\n");
 
+Printer::print('Initial state:');
+GridOutput::print($input);
+
+$interactions = 10;
 $game = new Game($input);
-$game->play(0);
+
+while ($interactions--) {
+    $generation = $game->nextGeneration();
+
+    Printer::print(sprintf('%d iteration state:', $interactions + 1));
+    GridOutput::print($generation);
+}
