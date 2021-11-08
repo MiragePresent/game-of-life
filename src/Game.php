@@ -51,6 +51,7 @@ class Game
             : $countAliveSiblings >= 2 && $countAliveSiblings <= 3;
     }
 
+    // TODO: Move it to Grid Class
     private function normilize(array $grid): array
     {
         // normilize top

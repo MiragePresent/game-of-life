@@ -6,6 +6,7 @@ use MiragePresent\GoL\Output\GridOutput;
 use MiragePresent\GoL\Output\Printer;
 use MiragePresent\GoL\Game;
 
+// TODO: Read grid from input
 $input = [
   [0, 0, 0, 0, 0],
   [0, 0, 1, 0, 0],
@@ -19,6 +20,7 @@ Printer::print("Hello from Game of Life\n");
 Printer::print('Initial state:');
 GridOutput::print($input);
 
+// TODO: Read number of iterations from input
 $interactions = 10;
 $game = new Game($input);
 
